@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Professor | Upload Notes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Smart Track</div>
+        <ul class="nav-links">
+            <li><a href="professor_home.html">Home</a></li>
+            <li><a href="professor_notes.html" class="active">Notes</a></li>
+            <li><a href="professor_tasks.html">Tasks</a></li>
+            <li><a href="login.html">Logout</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="card">
+            <h3>Upload Lecture Notes</h3>
+            <input type="file">
+            <button class="btn" onclick="triggerUpload('Notes')">Publish to Students</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <body onload="loadMaterials()"></body>
+    <h2>Upload Notes</h2>
+
+<input type="text" id="title" placeholder="Title" />
+<br><br>
+
+<input type="text" id="subject" placeholder="Subject" />
+<br><br>
+
+<textarea id="description" placeholder="Description"></textarea>
+<br><br>
+
+<button onclick="addMaterial()">Upload</button>
+
+<script src="script.js"></script>
+<h2>Available Notes</h2>
+
+<div id="materialsList"></div>
+<body onload="loadMaterials()"></body>
+
+<script src="script.js"></script>
+</body>
+</html>

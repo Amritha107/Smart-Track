@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student | Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Smart Track</div>
+        <ul class="nav-links">
+            <li><a href="student_home.html" class="active">Home</a></li>
+            <li><a href="student_notes.html">Notes</a></li>
+            <li><a href="student_tasks.html">Tasks</a></li>
+            <li><a href="login.html">Logout</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="header-banner">
+            <h1>Welcome Back, Chandler!</h1>
+        </div>
+        <div class="card">
+            <h3>Attendance Overview</h3>
+            <div style="background: #eee; border-radius: 10px; height: 25px; margin: 15px 0;">
+                <div style="background: var(--primary); width: 65%; height: 100%; border-radius: 10px; text-align: center; color: white; line-height: 25px;">65%</div>
+            </div>
+            <p>You have attended 81 out of 125 classes.</p>
+        </div>
+    </div>
+    <h2>My Attendance</h2>
+
+    <div id="attendanceBox"></div>
+    <body onload="loadAttendance()"></body>
+    <script src="script.js"></script>
+</body>
+</html>

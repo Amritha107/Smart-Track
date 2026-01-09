@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Professor | Assign Tasks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Smart Track</div>
+        <ul class="nav-links">
+            <li><a href="professor_home.html">Home</a></li>
+            <li><a href="professor_notes.html">Notes</a></li>
+            <li><a href="professor_tasks.html" class="active">Tasks</a></li>
+            <li><a href="login.html">Logout</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="card">
+            <h3>Create New Assignment</h3>
+            <input type="text" placeholder="Task Title">
+            <input type="date">
+            <button class="btn" onclick="triggerUpload('Assignment')">Assign Task</button>
+        </div>
+    </div>
+    <h2>Create Task</h2>
+    <input type="text" id="taskTitle" placeholder="Task title" />
+<br><br>
+
+    <input type="text" id="taskSubject" placeholder="Subject" />
+<br><br>
+
+    <button onclick="addTask()">Assign Task</button>
+
+    <script src="script.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

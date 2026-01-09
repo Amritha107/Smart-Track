@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student | Tasks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Smart Track</div>
+        <ul class="nav-links">
+            <li><a href="student_home.html">Home</a></li>
+            <li><a href="student_notes.html">Notes</a></li>
+            <li><a href="student_tasks.html" class="active">Tasks</a></li>
+            <li><a href="login.html">Logout</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="card">
+            <h3>Active Assignments</h3>
+            <p><strong>Task:</strong> Build a Responsive Dashboard</p>
+            <p><strong>Due Date:</strong> Jan 15, 2026</p>
+            <hr style="border: 0.5px solid #eee; margin: 15px 0;">
+            <input type="file" id="submission">
+            <button onclick="submitTask('695df98961e1640152f9eed8')">Submit Task</button>
+        </div>
+    </div>
+    <h2>My Tasks</h2>
+    
+    <div id="taskList"></div>
+    <body onload="loadTasks()"></body>
+    <script src="script.js"></script>
+</body>
+</html>

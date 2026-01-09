@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Professor | Attendance Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Smart Track</div>
+        <ul class="nav-links">
+            <li><a href="professor_home.html" class="active">Home</a></li>
+            <li><a href="professor_notes.html">Notes</a></li>
+            <li><a href="professor_tasks.html">Tasks</a></li>
+            <li><a href="login.html">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="header-banner">
+            <h2>Department Attendance Overview</h2>
+            <p>Select a department to view and manage records.</p>
+        </div>
+
+        <div class="card">
+            <label for="deptSelect"><strong>Choose Department:</strong></label>
+            <select id="deptSelect" onchange="updateDepartmentView()">
+                <option value="CSE">Computer Science (CSE)</option>
+                <option value="ECE">Electronics (ECE)</option>
+                <option value="MECH">Mechanical (MECH)</option>
+            </select>
+
+            <div class="stats-row" style="margin-top: 20px; display: flex; align-items: center; gap: 20px;">
+                <div class="attendance-box" id="deptPercentage">65%</div>
+                <div>
+                    <h4 id="deptTitle">CSE Department</h4>
+                    <p id="deptStatus">Status: Average Performance</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Student List - <span id="listTitle">CSE</span></h3>
+            <table class="report-table">
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>ID</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="studentTableBody">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+    <h2>Mark Attendance</h2>
+
+    <input type="text" id="studentId" placeholder="Student ID" />
+     <br><br>
+
+    <input type="number" id="percentage" placeholder="Attendance %" />
+     <br><br>
+
+    <button onclick="markAttendanceUI()">Mark Attendance</button>
+
+    <script src="script.js"></script>
+    <script>
+        // Run this once on load to show CSE by default
+        window.onload = updateDepartmentView;
+    </script>
+</body>
+</html>
